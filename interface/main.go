@@ -9,11 +9,11 @@ type bot interface {
 	getGreeting() string
 }
 
-func (eb englishBot) getGreeting() string {
+func (englishBot) getGreeting() string {
 	return "Hello!"
 }
 
-func (sb spanishBot) getGreeting() string {
+func (spanishBot) getGreeting() string {
 	return "Hola!"
 }
 
