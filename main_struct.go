@@ -24,8 +24,8 @@ func main() {
 	bob.print()
 
 	fmt.Println("\nUpdating First Name...")
-	bobP := &bob
-	bobP.updateFName("Ginny")
+
+	bob.updateFName("Ginny")
 	bob.print()
 }
 
