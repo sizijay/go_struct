@@ -23,12 +23,17 @@ func init() {
 	// tpl = template.Must(template.ParseFiles("1.gohtml"))
 
 	//for passing fnctions to the template
-	tpl = template.Must(template.New("1.gohtml").Funcs(fm).ParseFiles("1.gohtml"))
+	tpl = template.Must(template.New("1.gohtml").Funcs(fm).ParseGlob("*.gohtml"))
 }
 
 func first3(s string) string {
 	s = strings.TrimSpace(s)
 	return s[:3]
+}
+
+func (p person) ReverseName() string {
+	rev := p.LName + " " + p.FName
+	return rev
 }
 
 func main() {
@@ -68,7 +73,7 @@ func main() {
 
 	people := []person{p1, p2, p3, p4, p5}
 
-	err := tpl.Execute(os.Stdout, people)
+	err := tpl.ExecuteTemplate(os.Stdout, "1.gohtml", people)
 	if err != nil {
 		log.Fatalln(err)
 	}

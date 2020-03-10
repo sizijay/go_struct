@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Iterate through the slice</html>
+    <title>Iterate through the slice</title>
 </head>
+
 <body>
 <ul>
     {{range $index, $element := .}}
@@ -18,6 +19,9 @@
     <h3>Printing the Indexes directly</h3>
     <li>The value at the index 1 is {{index . 1}}</li>
     <li>The value at the index 4 is {{index . 4}}</li>
+
+    <h3>Importing from another template</h3>
+    <p>{{template "myTemplate" .}}</p>
 </ul>
 </body>
 </html>

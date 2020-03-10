@@ -1,0 +1,7 @@
+{{define "myTemplate"}}
+This is a sample text from the template named myTemplate
+xss: <script>alert("Unauthorized access found!")</script>
+Passed data + Reverse Name: {{range .}}
+{{.ReverseName}}
+{{end}}
+{{end}}
