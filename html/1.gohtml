@@ -9,6 +9,15 @@
     {{range $index, $element := .}}
     <li>{{$index}} is the index of {{$element}}</li>
     {{end}}
+
+    <h3>Accessing the items by the variable name</h3>
+    {{range .}}
+    <li>{{uc .FName}} is the first name.ToUpper and {{.LName}} is the last name and {{f3 .LName | uc}} is the last name.firstThree.</li>
+    {{end}}
+
+    <h3>Printing the Indexes directly</h3>
+    <li>The value at the index 1 is {{index . 1}}</li>
+    <li>The value at the index 4 is {{index . 4}}</li>
 </ul>
 </body>
 </html>
