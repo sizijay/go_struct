@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterate through the slice</html>
+</head>
+<body>
+<ul>
+    {{range $index, $element := .}}
+    <li>{{$index}} is the index of {{$element}}</li>
+    {{end}}
+</ul>
+</body>
+</html>
