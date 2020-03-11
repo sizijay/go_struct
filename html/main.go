@@ -53,7 +53,7 @@ func main() {
 
 	p2 := person{
 		FName: "Lahiru",
-		LName: "Nadeemal",
+		LName: `<script>alert("Unauthorized access found!")</script>`,
 	}
 
 	p3 := person{
